@@ -206,11 +206,11 @@
     }else if (indexPath.item == 2) {
         attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY + _smallCellSize.height + _itemSpacing, _smallCellSize.width, _smallCellSize.height);
     }else if (indexPath.item == 3) {
-        attribute.frame =CGRectMake(_insets.left, lineOriginY , _smallCellSize.width, _smallCellSize.height);
+        attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY, _smallCellSize.width, _smallCellSize.height);
     }else if (indexPath.item == 4) {
         attribute.frame =CGRectMake(_insets.left + _smallCellSize.width + _lineSpacing, lineOriginY , _smallCellSize.width, _smallCellSize.height);
     }else if (indexPath.item == 5) {
-        attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY, _smallCellSize.width, _smallCellSize.height);
+        attribute.frame =CGRectMake(_insets.left, lineOriginY , _smallCellSize.width, _smallCellSize.height);
     }
     
     // if (indexPath.item % 6 == 0) {
