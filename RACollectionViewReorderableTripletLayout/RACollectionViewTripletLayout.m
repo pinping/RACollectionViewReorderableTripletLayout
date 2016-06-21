@@ -199,23 +199,37 @@
     CGFloat rightSideLargeCellOriginX = _collectionViewSize.width - _largeCellSize.width - _insets.right;
     CGFloat rightSideSmallCellOriginX = _collectionViewSize.width - _smallCellSize.width - _insets.right;
     
-    if (indexPath.item % 6 == 0) {
+    if (indexPath.item == 0) {
         attribute.frame = CGRectMake(_insets.left, lineOriginY, _largeCellSize.width, _largeCellSize.height);
-    }else if ((indexPath.item + 1) % 6 == 0) {
-        attribute.frame = CGRectMake(rightSideLargeCellOriginX, lineOriginY, _largeCellSize.width, _largeCellSize.height);
-    }else if (line % 2 == 0) {
-        if (indexPath.item % 2 != 0) {
-            attribute.frame = CGRectMake(rightSideSmallCellOriginX, lineOriginY, _smallCellSize.width, _smallCellSize.height);
-        }else {
-            attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY + _smallCellSize.height + _itemSpacing, _smallCellSize.width, _smallCellSize.height);
-        }
-    }else {
-        if (indexPath.item % 2 != 0) {
-            attribute.frame = CGRectMake(_insets.left, lineOriginY, _smallCellSize.width, _smallCellSize.height);
-        }else {
-            attribute.frame =CGRectMake(_insets.left, lineOriginY + _smallCellSize.height + _itemSpacing, _smallCellSize.width, _smallCellSize.height);
-        }
+    }else if (indexPath.item == 1) {
+        attribute.frame = CGRectMake(rightSideSmallCellOriginX, lineOriginY, _smallCellSize.width, _smallCellSize.height);
+    }else if (indexPath.item == 2) {
+        attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY + _smallCellSize.height + _itemSpacing, _smallCellSize.width, _smallCellSize.height);
+    }else if (indexPath.item == 3) {
+        attribute.frame =CGRectMake(_insets.left, lineOriginY , _smallCellSize.width, _smallCellSize.height);
+    }else if (indexPath.item == 4) {
+        attribute.frame =CGRectMake(_insets.left + _smallCellSize.width + _lineSpacing, lineOriginY , _smallCellSize.width, _smallCellSize.height);
+    }else if (indexPath.item == 5) {
+        attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY, _smallCellSize.width, _smallCellSize.height);
     }
+    
+    // if (indexPath.item % 6 == 0) {
+    //     attribute.frame = CGRectMake(_insets.left, lineOriginY, _largeCellSize.width, _largeCellSize.height);
+    // }else if ((indexPath.item + 1) % 6 == 0) {
+    //     attribute.frame = CGRectMake(rightSideLargeCellOriginX, lineOriginY, _largeCellSize.width, _largeCellSize.height);
+    // }else if (line % 2 == 0) {
+    //     if (indexPath.item % 2 != 0) {
+    //         attribute.frame = CGRectMake(rightSideSmallCellOriginX, lineOriginY, _smallCellSize.width, _smallCellSize.height);
+    //     }else {
+    //         attribute.frame =CGRectMake(rightSideSmallCellOriginX, lineOriginY + _smallCellSize.height + _itemSpacing, _smallCellSize.width, _smallCellSize.height);
+    //     }
+    // }else {
+    //     if (indexPath.item % 2 != 0) {
+    //         attribute.frame = CGRectMake(_insets.left, lineOriginY, _smallCellSize.width, _smallCellSize.height);
+    //     }else {
+    //         attribute.frame =CGRectMake(_insets.left, lineOriginY + _smallCellSize.height + _itemSpacing, _smallCellSize.width, _smallCellSize.height);
+    //     }
+    // }
     return attribute;
 }
 
